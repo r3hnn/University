@@ -12,7 +12,6 @@ colSums(is.na(df))
 
 # 4. Visualizations (BEFORE)
 # This splits the screen into 5 parts
-par(mfrow = c(1, 1))
 hist(df$math.score,
     col = "blue",
     main = "Distribution of Math Scores (Before Cleaning)",
@@ -59,7 +58,6 @@ sd(df$math.score)
 
 # 6. Visualizations (AFTER)
 # We just run them again to show the cleaned data
-par(mfrow = c(1, 1))
 hist(df$math.score,
     col = "blue",
     main = "Distribution of Math Scores (After Cleaning)",
