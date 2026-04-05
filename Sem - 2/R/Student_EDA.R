@@ -13,11 +13,30 @@ colSums(is.na(df))
 # 4. Visualizations (BEFORE)
 # This splits the screen into 5 parts
 par(mfrow=c(2,3))
-hist(df$math.score)
-barplot(table(df$parental.level.of.education))
-boxplot(df$reading.score)
-plot(df$math.score, df$writing.score)
-pie(table(df$gender))
+hist(df$math.score,
+    col = "blue",
+    main = "Distribution of Math Scores (Before Cleaning)",
+    xlab = "Math Score",
+    ylab = "Frequency")
+barplot(table(df$parental.level.of.education),
+    col="red",
+    main = "Distribution of Parental Levels of Education (Before Cleaning)",
+    xlab = "Parental Level of Education",
+    ylab = "Frequency")
+boxplot(df$reading.score,
+    col="green",
+    main = "Distribution of Reading Scores (Before Cleaning)",
+    xlab = "Reading Score",
+    ylab = "Frequency")
+plot(df$math.score, df$writing.score,
+    col="purple",
+    main = "Math vs Writing Scores (Before Cleaning)",
+    xlab = "Math Score",
+    ylab = "Writing Score")
+pie(table(df$gender),
+    col=c("pink", "lightblue"),
+    main = "Distribution of Gender (Before Cleaning)",
+    labels = c("Female", "Male"))
 
 # 5. Data Cleaning
 # Handle missing values (Mean imputation)
@@ -41,8 +60,27 @@ sd(df$math.score)
 # 6. Visualizations (AFTER)
 # We just run them again to show the cleaned data
 par(mfrow=c(2,3))
-hist(df$math.score, col="blue")
-barplot(table(df$parental.level.of.education), col="red")
-boxplot(df$reading.score, col="green")
-plot(df$math.score, df$writing.score, col="purple")
-pie(table(df$gender))
+hist(df$math.score,
+    col = "blue",
+    main = "Distribution of Math Scores (After Cleaning)",
+    xlab = "Math Score",
+    ylab = "Frequency")
+barplot(table(df$parental.level.of.education),
+    col="red",
+    main = "Distribution of Parental Levels of Education (After Cleaning)",
+    xlab = "Parental Level of Education",
+    ylab = "Frequency")
+boxplot(df$reading.score,
+    col="green",
+    main = "Distribution of Reading Scores (After Cleaning)",
+    xlab = "Reading Score",
+    ylab = "Frequency")
+plot(df$math.score, df$writing.score,
+    col="purple",
+    main = "Math vs Writing Scores (After Cleaning)",
+    xlab = "Math Score",
+    ylab = "Writing Score")
+pie(table(df$gender),
+    col=c("pink", "lightblue"),
+    main = "Distribution of Gender (After Cleaning)",
+    labels = c("Female", "Male"))
