@@ -16,22 +16,22 @@ par(mfrow = c(1, 1))
 hist(df$math.score,
     col = "blue",
     main = "Distribution of Math Scores (Before Cleaning)",
-    xlab = "Math Score",
-    ylab = "Frequency")
+    xlab = "Math Score (Marks out of 100)",
+    ylab = "Number of Students")
 barplot(table(df$parental.level.of.education),
     col="red",
     main = "Distribution of Parental Levels of Education (Before Cleaning)",
-    xlab = "Parental Level of Education",
-    ylab = "Frequency")
+    xlab = "Parental Level of Education (Highest Degree)",
+    ylab = "Number of Students")
 boxplot(df$reading.score,
     col="green",
     main = "Distribution of Reading Scores (Before Cleaning)",
-    xlab = "Reading Score",
-    ylab = "Frequency")
+    xlab = "Reading Score (Marks out of 100)",
+    ylab = "Number of Students")
 plot(df$math.score, df$writing.score,
     col="purple",
     main = "Math vs Writing Scores (Before Cleaning)",
-    xlab = "Math Score",
+    xlab = "Math Score (Marks out of 100)",
     ylab = "Writing Score")
 pie(table(df$gender),
     col=c("pink", "lightblue"),
@@ -63,22 +63,22 @@ par(mfrow = c(1, 1))
 hist(df$math.score,
     col = "blue",
     main = "Distribution of Math Scores (After Cleaning)",
-    xlab = "Math Score",
-    ylab = "Frequency")
+    xlab = "Math Score (Marks out of 100)",
+    ylab = "Number of Students")
 barplot(table(df$parental.level.of.education),
     col="red",
     main = "Distribution of Parental Levels of Education (After Cleaning)",
-    xlab = "Parental Level of Education",
-    ylab = "Frequency")
+    xlab = "Parental Level of Education (Highest Degree)",
+    ylab = "Number of Students")
 boxplot(df$reading.score,
     col="green",
     main = "Distribution of Reading Scores (After Cleaning)",
-    xlab = "Reading Score",
-    ylab = "Frequency")
+    xlab = "Reading Score (Marks out of 100)",
+    ylab = "Number of Students")
 plot(df$math.score, df$writing.score,
     col="purple",
     main = "Math vs Writing Scores (After Cleaning)",
-    xlab = "Math Score",
+    xlab = "Math Score (Marks out of 100)",
     ylab = "Writing Score")
 pie(table(df$gender),
     col=c("pink", "lightblue"),
