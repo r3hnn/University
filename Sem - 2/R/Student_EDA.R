@@ -7,7 +7,6 @@ str(df)
 summary(df)
 
 # 3. Identify missing values
-is.na(df)
 colSums(is.na(df))
 
 # 4. Visualizations (BEFORE)
