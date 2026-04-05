@@ -41,9 +41,6 @@ pie(table(df$gender),
 # This replaces NAs with the average math score
 df$math.score[is.na(df$math.score)] <- mean(df$math.score, na.rm = TRUE)
 
-# Check data types and convert
-df$gender <- as.factor(df$gender)
-
 # Detect duplicates
 sum(duplicated(df))
 
