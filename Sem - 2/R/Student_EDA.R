@@ -34,7 +34,7 @@ plot(df$math.score, df$writing.score,
     ylab = "Writing Score")
 pie(table(df$gender),
     col=c("pink", "lightblue"),
-    main = "Distribution of Gender (Before Cleaning)",
+    main = "Distribution of Gender",
     labels = c("Female", "Male"))
 
 # 5. Data Cleaning
