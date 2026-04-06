@@ -1,6 +1,6 @@
 # 1. Import the dataset
 # Put your CSV file in the same folder as this script
-df <- read.csv("C:\\Users\\rehan\\Downloads\\archive\\StudentsPerformance.csv")
+df <- read.csv("c:\\Users\\rehan\\Downloads\\archive\\StudentsPerformance.csv")
 df_copy <- df
 
 # 2. Understand structure
@@ -40,7 +40,7 @@ pie(table(df$gender),
 # 5. Data Cleaning
 # Handle missing values (Mean imputation)
 # This replaces NAs with the average math score
-df$math.score[is.na(df_copy$math.score)] <- mean(df$math.score, na.rm = TRUE)
+df_copy$math.score[is.na(df_copy$math.score)] <- mean(df_copy$math.score, na.rm = TRUE)
 
 # Detect duplicates
 sum(duplicated(df_copy))
