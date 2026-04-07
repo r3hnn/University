@@ -1,3 +1,4 @@
+# Data Cleaning and Exploratory Data Analysis (EDA) using R
 # 1. Import the dataset
 # Put your CSV file in the same folder as this script
 df <- read.csv("c:\\Users\\rehan\\Downloads\\archive\\StudentsPerformance.csv")
