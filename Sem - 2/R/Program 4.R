@@ -1,3 +1,4 @@
+#R program to accept user input and calculate mean and standard deviation for different values.
 calculate_mean_sd <- function(data, freq = NULL) {
   #CALCULATE MEAN
   if (is.null(freq)) {
@@ -26,6 +27,7 @@ cat("3. continuous data\n")
 choice <- as.integer(readline(prompt = "Enter your choice (1/2/3): "))
 
 if (choice == 1) {
+    #DIRECT DATA
   n <- as.integer(readline(prompt = "Enter the number of data points: "))
   data <- numeric(n)
   for (i in 1:n) {
@@ -35,6 +37,7 @@ if (choice == 1) {
   print(data)
   calculate_mean_sd(data)
 } else if (choice == 2) {
+    #DISCRETE DATA
   n <- as.integer(readline(prompt = "Enter the number of different values: "))
   data <- numeric(n)
   freq <- numeric(n)
@@ -47,6 +50,7 @@ if (choice == 1) {
   calculate_mean_sd(data, freq)
   
 } else if (choice == 3) {
+    #CONTINUOUS DATA
   n <- as.integer(readline(prompt = "Enter the number of classes: "))
   lower <- numeric(n)
   upper <- numeric(n)
