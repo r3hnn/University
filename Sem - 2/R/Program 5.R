@@ -17,24 +17,24 @@ numeric_cols["ID"] <- FALSE # Exclude ID from processing
 
 # Loop through numeric columns for Imputation and Outlier handling
 for (i in names(data)[numeric_cols]) {
-  
   # 1. Mean Imputation for NAs
   data[[i]][is.na(data[[i]])] <- mean(data[[i]], na.rm = TRUE)
-  
+
   # 2. Calculate IQR and Bounds
   Q1 <- quantile(data[[i]], 0.25)
   Q3 <- quantile(data[[i]], 0.75)
   IQR <- Q3 - Q1
-  
+
   lower <- Q1 - (1.5 * IQR)
   upper <- Q3 + (1.5 * IQR)
-  
+
   print(paste(" Processing columns: ", i))
   print(paste(" Lower Bound: ", lower, " Upper Bound: ", upper))
-  
+
   # 3. Outlier Imputation (Capping)
-  data[[i]] <- ifelse(data[[i]] < lower, lower, 
-                      ifelse(data[[i]] > upper, upper, data[[i]]))
+  data[[i]] <- ifelse(data[[i]] < lower, lower,
+    ifelse(data[[i]] > upper, upper, data[[i]])
+  )
 }
 
 print(" The data after outlier Imputation: ")
