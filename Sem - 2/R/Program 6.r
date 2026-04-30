@@ -9,7 +9,7 @@ print(student_data)
 
 library(ggplot2)
 
-ggplot(student_data, aes(x = study_hours, y = Marks)) +
+ggplot(student_data, aes(x = student, y = Marks)) +
     geom_bar(stat = "identity", fill = "blue") +
     labs(title = "Marks of Students",
         x = "Student",
