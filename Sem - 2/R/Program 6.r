@@ -1,3 +1,7 @@
+#Using the ggplot2 package in R write programs to create the following visualization:
+#Bar chart to display marks of students.
+#Scatter plot with line graph to show the relationship between study hours and marks.
+#Histogram to visualize the distribution of attendance.
 student_data <- data.frame(
     student = c("A","B","C","D","E","F","G","H"),
     study_hours = c(2, 3, 4, 5, 6, 3, 7, 8),
