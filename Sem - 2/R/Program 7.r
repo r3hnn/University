@@ -1,4 +1,4 @@
-#Using the ggplot2 package in Rm write progras to create the following visualization:
+#Using the ggplot2 package in R write progras to create the following visualization:
 #Line Graph to display the trend of sales across different months.
 #Box plot to visualize the distribution of profit across different regions.
 #Density plot to show the distribution of sales values.
