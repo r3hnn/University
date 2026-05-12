@@ -213,5 +213,4 @@ ggplot(df_combined, aes(x = Score, fill = Type)) +
   labs(title = "Histogram: Original vs Adjusted Exam Scores", x = "Score", y = "Frequency") +
   theme_minimal()
 
----------------------------------------------------------------------------------------------------
-  
+#---------------------------------------------------------------------------------------------------
