@@ -34,3 +34,4 @@ ggplot(student_data, aes(x = Attendence)) +
     x = "Attendance (%)",
     y = "Frequency") +
     theme_light()
+    
